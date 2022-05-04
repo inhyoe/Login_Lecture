@@ -11,9 +11,10 @@ app.set("views",
         "./src/views"//폴더명
         );
 app.set("view engine","ejs")
+
 app.use(express.
         static(`${__dirname}/src/public`)// 정적경로로 생성
-        )
+        ) // 미들웨어
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended : true }))
