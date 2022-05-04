@@ -2,7 +2,7 @@
 // 모듈
 const express = require('express');
 const app =express();
-
+const bodyParser = require("body-parser");
 
 // 라우팅
 const home = require("./src/routes/home")
@@ -14,6 +14,9 @@ app.set("view engine","ejs")
 app.use(express.
         static(`${__dirname}/src/public`)// 정적경로로 생성
         )
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended : true }))
 
 
 //https://www.youtube.com/watch?v=Jy9quSZbVTc&list=PLSK4WsJ8JS4cQ-niGNum4bkK_THHOizTs&index=10

@@ -10,7 +10,7 @@
 
 const id = document.querySelector("#id"); // id = # , class .
 const psword = document.querySelector("#psword");
- const loginBtn = document.querySelector("button")
+const loginBtn = document.querySelector("button")
 
 console.log(id); // qSl로 부여하기 전에 clg가 먼저 실행됨 ejs의 특성
 
