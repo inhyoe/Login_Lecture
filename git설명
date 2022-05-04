@@ -3,3 +3,9 @@
 git add 깃허브 업로드 (스테이징 공간에 올라감)
 git commit  (스테이징 공간에있는 깃을 커밋한 후)
 git push (깃허브 업로드)
+
+git . (전체 파일)
+
+git remote add origin (깃 저장소)
+
+ps -a : 

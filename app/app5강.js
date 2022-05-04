@@ -5,12 +5,16 @@ const app =express();
 
 
 // 라우팅
-const home = require("./routes/home")
+const home = require("./src/routes/home")
 
 app.set("views",
-        "./views"//폴더명
+        "./src/views"//폴더명
         );
 app.set("view engine","ejs")
+app.use(express.
+        static(`${__dirname}/src/public`)// 정적경로로 생성
+        )
+
 
 //https://www.youtube.com/watch?v=Jy9quSZbVTc&list=PLSK4WsJ8JS4cQ-niGNum4bkK_THHOizTs&index=10
 
