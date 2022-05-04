@@ -2,6 +2,7 @@
 
 // 로그인 기능 구현
 
+
 // front 에서 값을 입력한 후 server에서 반응
 
 // DOM객체를 활용한다
@@ -21,6 +22,15 @@ function login(){
         id : id.value,
         psword : psword.value
     };
-
     console.log(req);
+    console.log(JSON.stringify(req)); // 문자열로 전달.
+    fetch("/login", {
+        //object 형태로 전달해야함
+        method: "POST", // Restful : API -> 네트워크 통신을위한 통신규약.
+        headers: {
+            "Content-Type" : "application/json"
+            //나의 데이터 타입 : json의 데이터를 전달한다
+        },
+        body : JSON.stringify(req)
+    })
 }
